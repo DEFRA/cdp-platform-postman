@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e2ee333e-3f33-46f8-9a1f-3fec8b9065a8",
+		"name": "CDP Node.js Backend Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"three\",\n    \"name\": \"Three\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/examples",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"examples"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"three\",\n    \"name\": \"Three\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/examples/three",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"examples",
+						"three"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Examples",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/examples",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"examples"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/examples/one",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"examples",
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}{{appPrefix}}/health",
+					"host": [
+						"{{root}}{{appPrefix}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

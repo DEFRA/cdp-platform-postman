@@ -1,0 +1,1143 @@
+{
+	"info": {
+		"_postman_id": "c4f31bd2-67b8-4237-885e-eda556243d5b",
+		"name": "CDP Portal Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "All secrets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/secrets/cdp-portal-backend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"secrets",
+						"cdp-portal-backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All secrets Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/secrets/cdp-portal-backend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"secrets",
+						"cdp-portal-backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Artifacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/artifacts/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"artifacts",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auto test runs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/auto-test-runs/cdp-example-node-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"auto-test-runs",
+						"cdp-example-node-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Available Migrations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/migrations/available/cdp-example-node-postgres-be",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"migrations",
+						"available",
+						"cdp-example-node-postgres-be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buckets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/tenant-buckets/find-ffa-data-ingester",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"tenant-buckets",
+						"find-ffa-data-ingester"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create test run",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"testSuite\": \"cdp-portal-smoke-tests\",\n      \"runId\": \"323424-534535355\",\n      \"environment\": \"dev\",\n      \"user\": {\n        \"id\": \"62bb35d2-d4f2-4cf6-abd3-262d99727677\",\n        \"displayName\": \"Ben Chidgey\"\n      }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/test-run",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-run"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployables/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployables",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployables?runMode=service&groups=aabe63e7-87ef-4beb-a596-c810631fc474",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployables"
+					],
+					"query": [
+						{
+							"key": "runMode",
+							"value": "service"
+						},
+						{
+							"key": "groups",
+							"value": "aabe63e7-87ef-4beb-a596-c810631fc474"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployments/ad3bf1e9-4a50-4301-ab2d-f49f25f9eb86",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployments",
+						"ad3bf1e9-4a50-4301-ab2d-f49f25f9eb86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployment-config/cdp-portal-frontend/management",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployment-config",
+						"cdp-portal-frontend",
+						"management"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment Config V2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/v2/deployment-config/cdp-portal-frontend/management",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"v2",
+						"deployment-config",
+						"cdp-portal-frontend",
+						"management"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployments/92238c8c-57ce-4d23-9e6e-0c7e4beab7d0",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployments",
+						"92238c8c-57ce-4d23-9e6e-0c7e4beab7d0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployment-settings/cdp-portal-frontend/infra-dev",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployment-settings",
+						"cdp-portal-frontend",
+						"infra-dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployments?environment=dev",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployments"
+					],
+					"query": [
+						{
+							"key": "environment",
+							"value": "dev"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployments filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/v2/deployments/filters",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"v2",
+						"deployments",
+						"filters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Environments",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/environments",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"environments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GitHub repositories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/github-repo/cdp-platform",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"github-repo",
+						"cdp-platform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Migrations Runs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/migrations/run/9d77e9a0-6214-4fda-b6b2-2510d067488a",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"migrations",
+						"run",
+						"9d77e9a0-6214-4fda-b6b2-2510d067488a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Migrations Latest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/migrations/latest/cdp-example-node-postgres-be",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"migrations",
+						"latest",
+						"cdp-example-node-postgres-be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Libraries repositories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/repositories/libraries/hapi-tracing",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"repositories",
+						"libraries",
+						"hapi-tracing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register pending secret",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"environment\":  \"infra-dev\",\n    \"service\":  \"cdp-portal-backend\",\n    \"secretKey\":  \"BEN_TEST_5\",\n    \"action\": \"add_secret\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/secrets/register/pending",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"secrets",
+						"register",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repositories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/repositories/all/aabe63e7-87ef-4beb-a596-c810631fc474",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"repositories",
+						"all",
+						"aabe63e7-87ef-4beb-a596-c810631fc474"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repositories - Tests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/repositories/all/tests/aabe63e7-87ef-4beb-a596-c810631fc474",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"repositories",
+						"all",
+						"tests",
+						"aabe63e7-87ef-4beb-a596-c810631fc474"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repository",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/repositories/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"repositories",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Running service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/whats-running-where/cdp-example-node-postgres-be",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"whats-running-where",
+						"cdp-example-node-postgres-be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Running services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/whats-running-where",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"whats-running-where"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Running services filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/v2/whats-running-where/filters",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"v2",
+						"whats-running-where",
+						"filters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secrets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/secrets/test/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"secrets",
+						"test",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/services/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"services",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/services?teamId=aabe63e7-87ef-4beb-a596-c810631fc474",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"services"
+					],
+					"query": [
+						{
+							"key": "teamId",
+							"value": "aabe63e7-87ef-4beb-a596-c810631fc474"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Services Filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/services/filters",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"services",
+						"filters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Migrations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/migrations/run",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"migrations",
+						"run"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Squashed Deployments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/squashed-deployments?environment=infra-dev",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"squashed-deployments"
+					],
+					"query": [
+						{
+							"key": "environment",
+							"value": "infra-dev"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Squid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/squid-proxy-config/forms-runner/dev",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"squid-proxy-config",
+						"forms-runner",
+						"dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Templates repositories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/repositories/templates/",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"repositories",
+						"templates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tenant services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/tenant-services/cdp-postgres-service",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"tenant-services",
+						"cdp-postgres-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test run",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/test-run/123456789-987654321",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-run",
+						"123456789-987654321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test suite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/test-suites",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-suites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test suite test runs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/test-run?name=cdp-portal-smoke-tests&page=1&size=50",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-run"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "cdp-portal-smoke-tests"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test suites",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/test-suites",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-suites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test suites with latest runs",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/test-suite/test-run",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"test-suite",
+						"test-run"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vanity urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/vanity-urls/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"vanity-urls",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployments with Migrations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployments-with-migrations",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployments-with-migrations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

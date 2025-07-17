@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "abeafc85-4e87-47b4-accd-ad5aee04f9b3",
+		"name": "CDP Example Node Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Animal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/animals/662a4865242f5b4f5e3032b6",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"animals",
+						"662a4865242f5b4f5e3032b6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creature",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/creatures/6542b38d-3200-4ac8-a644-74e8ad801e09",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"creatures",
+						"6542b38d-3200-4ac8-a644-74e8ad801e09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Animals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/animals",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creatures",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/creatures",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"creatures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dave\",\n    \"kind\": \"yak\",\n    \"phoneNumber\": \"0123456789\",\n    \"fileUrl\": \"my-bucket/d15c2ec4-0556-4ca2-a4ef-fb716bfcfbe3/unicorn.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/animals",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/plants/1eea5dbd-067e-4378-aa45-f4c83db53fd1",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"plants",
+						"1eea5dbd-067e-4378-aa45-f4c83db53fd1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/plants",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"plants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

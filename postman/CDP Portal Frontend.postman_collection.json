@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "deea7947-3de5-4fe7-a623-c43b6c51200c",
+		"name": "CDP Portal Frontend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cdp-request-id",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{root}}/health",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

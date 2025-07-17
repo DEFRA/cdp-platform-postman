@@ -1,0 +1,749 @@
+{
+	"info": {
+		"_postman_id": "6f1b42d4-0d3a-4fac-8afb-537a2dfdbb57",
+		"name": "CDP User Service Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Admin create scope",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"postman\",\n    \"description\": \"A permission set from post man\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/scopes/admin",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin delete scope",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/scopes/admin/6747208bc3a6510d853c0ad3",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes",
+						"admin",
+						"6747208bc3a6510d853c0ad3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin scope",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/scopes/admin/67500e94922c4fe819dd8832",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes",
+						"admin",
+						"67500e94922c4fe819dd8832"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin scopes",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/scopes/admin",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin update scope",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Team is allowed to deploy to and view the ext-test environment hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/scopes/admin/6747208bc3a6510d853c0ad4",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes",
+						"admin",
+						"6747208bc3a6510d853c0ad4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove user from team",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/teams/40c1e9af-e385-4a68-941f-177b276ca821/remove/d9fff48b-f7b9-4545-abcf-3e796c644479",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"teams",
+						"40c1e9af-e385-4a68-941f-177b276ca821",
+						"remove",
+						"d9fff48b-f7b9-4545-abcf-3e796c644479"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search AAD Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/aad-users?query=sdffdsfadsfasdfaf",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"aad-users"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "sdffdsfadsfasdfaf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Team",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/teams/aabe63e7-87ef-4beb-a596-c810631fc474",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"teams",
+						"aabe63e7-87ef-4beb-a596-c810631fc474"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teams",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/teams",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teams with query",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/teams?query=plat",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"teams"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "plat"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/users/6f73f767-1a4b-486d-b517-9aaf815d1f94",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"users",
+						"6f73f767-1a4b-486d-b517-9aaf815d1f94"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User scopes",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/scopes",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User scopes - Without Auth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/scopes",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"scopes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/users?query=ben",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "ben"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

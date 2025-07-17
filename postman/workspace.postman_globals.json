@@ -1,0 +1,45 @@
+{
+	"id": "ac53f51c-fad6-4753-8366-5af59d341aad",
+	"values": [
+		{
+			"key": "authorizationEndpoint",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "callbackUrl",
+			"value": "http://localhost:3000/auth/callback",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "tokenEndpoint",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "clientId",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "clientSecret",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "scope",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-04-25T10:27:26.392Z",
+	"_postman_exported_using": "Postman/11.39.2"
+}

@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "60d1b99b-5723-43e9-b9af-8799415bf371",
+		"name": "CDP Self Service Ops",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Add secret",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"secretKey\": \"BEN_TEST_10\",\n    \"secretValue\": \"ben-example\",\n    \"teamId\": \"aabe63e7-87ef-4beb-a596-c810631fc474\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/secrets/add/cdp-portal-frontend/management",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"secrets",
+						"add",
+						"cdp-portal-frontend",
+						"management"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create service",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "{{callbackUrl}}",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{clientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{clientId}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{tokenEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{authorizationEndpoint}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "DEFRA",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"repositoryName\": \"ben-example\",\n    \"serviceTypeTemplate\": \"dp-node-frontend-template\",\n    \"teamId\": \"dd4d625b-02c0-4e74-8975-7a03b48c9248\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/create-microservice",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"create-microservice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deploy service info",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deploy-service/info/management/cdp-self-service-ops",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deploy-service",
+						"info",
+						"management",
+						"cdp-self-service-ops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deploy service options",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deploy-service/options",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deploy-service",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "In-progress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/status/in-progress?kind=microservice",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"status",
+						"in-progress"
+					],
+					"query": [
+						{
+							"key": "kind",
+							"value": "microservice"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "In-progress filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/status/in-progress/filters?kind=microservice",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"status",
+						"in-progress",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "kind",
+							"value": "microservice"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/status/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"status",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
