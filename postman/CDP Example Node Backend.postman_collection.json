@@ -37,6 +37,35 @@
 			"response": []
 		},
 		{
+			"name": "Animals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/animals",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Creature",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -61,35 +90,6 @@
 					"path": [
 						"creatures",
 						"6542b38d-3200-4ac8-a644-74e8ad801e09"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Animals",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": animalSession.name,\n    \"kind\": animalSession.kind,\n    \"phoneNumber\": animalSession.phoneNumber,\n    \"fileUrl\": animalSession?.uploadStatus?.scanResult?.fileUrl\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{root}}/animals",
-					"host": [
-						"{{root}}"
-					],
-					"path": [
-						"animals"
 					]
 				}
 			},

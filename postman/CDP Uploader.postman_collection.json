@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "34aa03ea-f3bb-4ae7-b96e-b3041a74db43",
+		"name": "CDP Uploader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32854331"
+	},
+	"item": [
+		{
+			"name": "Initiate Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"redirect\": \"http://localhost:3000/animals/redirect\",\n      \"callback\": \"http://localhost:300\",\n      \"s3Bucket\": \"cdp-example-node-frontend\",\n      \"s3Path\": \"s3Path\",\n      \"mimeTypes\": [\n        \"image/png\",\n        \"image/jpg\"\n      ],\n      \"maxFileSize\": 100,\n      \"metadata\": { \"plantId\": \"12345\" }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/initiate",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"initiate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/status/{{uploadId}}",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"status",
+						"{{uploadId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message ❌",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4566/?Action=SendMessage&QueueUrl=http://sqs.eu-west-2.127.0.0.1:4566/000000000000/cdp-clamav-results&MessageBody={\"source\":\"cdp-clamav-lambda\", \"bucket\":\"cdp-example-node-frontend\", \"key\":\"{{uploadId}}/{{fileId}}\", \"status\":\"INFECTED\", \"message\":\"no errors\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "Action",
+							"value": "SendMessage"
+						},
+						{
+							"key": "QueueUrl",
+							"value": "http://sqs.eu-west-2.127.0.0.1:4566/000000000000/cdp-clamav-results"
+						},
+						{
+							"key": "MessageBody",
+							"value": "{\"source\":\"cdp-clamav-lambda\", \"bucket\":\"cdp-example-node-frontend\", \"key\":\"{{uploadId}}/{{fileId}}\", \"status\":\"INFECTED\", \"message\":\"no errors\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message ✅",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4566/?Action=SendMessage&QueueUrl=http://sqs.eu-west-2.127.0.0.1:4566/000000000000/cdp-clamav-results&MessageBody={\"source\":\"cdp-clamav-lambda\", \"bucket\":\"cdp-example-node-frontend\", \"key\":\"{{uploadId}}/{{fileId}}\", \"status\":\"CLEAN\", \"message\":\"no errors\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "Action",
+							"value": "SendMessage"
+						},
+						{
+							"key": "QueueUrl",
+							"value": "http://sqs.eu-west-2.127.0.0.1:4566/000000000000/cdp-clamav-results"
+						},
+						{
+							"key": "MessageBody",
+							"value": "{\"source\":\"cdp-clamav-lambda\", \"bucket\":\"cdp-example-node-frontend\", \"key\":\"{{uploadId}}/{{fileId}}\", \"status\":\"CLEAN\", \"message\":\"no errors\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
