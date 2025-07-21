@@ -25,24 +25,6 @@
 			"response": []
 		},
 		{
-			"name": "All secrets Copy",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{root}}/secrets/cdp-portal-backend",
-					"host": [
-						"{{root}}"
-					],
-					"path": [
-						"secrets",
-						"cdp-portal-backend"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Artifacts",
 			"request": {
 				"method": "GET",
@@ -84,14 +66,32 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/migrations/available/cdp-example-node-postgres-be",
+					"raw": "{{root}}/migrations/services/cdp-example-node-postgres-be",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"migrations",
-						"available",
+						"services",
 						"cdp-example-node-postgres-be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Gateway Urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/api-gateways/cdp-user-service-backend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api-gateways",
+						"cdp-user-service-backend"
 					]
 				}
 			},
@@ -304,13 +304,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/deployments/92238c8c-57ce-4d23-9e6e-0c7e4beab7d0",
+					"raw": "{{root}}/deployments/c4bb803a-f0ac-4caa-beca-f5e0a0698387",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"deployments",
-						"92238c8c-57ce-4d23-9e6e-0c7e4beab7d0"
+						"c4bb803a-f0ac-4caa-beca-f5e0a0698387"
 					]
 				}
 			},
@@ -364,14 +364,40 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/v2/deployments/filters",
+					"raw": "{{root}}/deployments/filters",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
-						"v2",
 						"deployments",
 						"filters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployments with Migrations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/deployments-with-migrations?page=1&size=50",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"deployments-with-migrations"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
 					]
 				}
 			},
@@ -450,6 +476,47 @@
 			"response": []
 		},
 		{
+			"name": "Entities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/entities?includeDecommissioned=true",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"entities"
+					],
+					"query": [
+						{
+							"key": "includeDecommissioned",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/entities/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"entities",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GitHub repositories",
 			"request": {
 				"method": "GET",
@@ -473,14 +540,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/migrations/run/9d77e9a0-6214-4fda-b6b2-2510d067488a",
+					"raw": "{{root}}/migrations/runs/38b6d1a8-aa9c-481b-85ba-bfbf014b368e",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"migrations",
-						"run",
-						"9d77e9a0-6214-4fda-b6b2-2510d067488a"
+						"runs",
+						"38b6d1a8-aa9c-481b-85ba-bfbf014b368e"
 					]
 				}
 			},
@@ -761,18 +828,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/services?teamId=aabe63e7-87ef-4beb-a596-c810631fc474",
+					"raw": "{{root}}/services",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"services"
-					],
-					"query": [
-						{
-							"key": "teamId",
-							"value": "aabe63e7-87ef-4beb-a596-c810631fc474"
-						}
 					]
 				}
 			},
@@ -857,6 +918,43 @@
 			"response": []
 		},
 		{
+			"name": "Shuttering",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/shuttering/cdp-portal-frontend",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"shuttering",
+						"cdp-portal-frontend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shuttering Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/shuttering/url/cdp-user-service-backend.integration.api.defra.gov.uk",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"shuttering",
+						"url",
+						"cdp-user-service-backend.integration.api.defra.gov.uk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Templates repositories",
 			"request": {
 				"method": "GET",
@@ -881,13 +979,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/tenant-services/cdp-postgres-service",
+					"raw": "{{root}}/tenant-services/cdp-example-node-postgres-be",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"tenant-services",
-						"cdp-postgres-service"
+						"cdp-example-node-postgres-be"
 					]
 				}
 			},
@@ -1117,23 +1215,6 @@
 					"path": [
 						"vanity-urls",
 						"cdp-portal-frontend"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Deployments with Migrations",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{root}}/deployments-with-migrations",
-					"host": [
-						"{{root}}"
-					],
-					"path": [
-						"deployments-with-migrations"
 					]
 				}
 			},

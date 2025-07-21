@@ -180,15 +180,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/deploy-service/info/management/cdp-self-service-ops",
+					"raw": "{{root}}/deploy-service/info/infra-dev/cdp-portal-frontend",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"deploy-service",
 						"info",
-						"management",
-						"cdp-self-service-ops"
+						"infra-dev",
+						"cdp-portal-frontend"
 					]
 				}
 			},
