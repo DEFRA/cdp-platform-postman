@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "c4f31bd2-67b8-4237-885e-eda556243d5b",
+		"_postman_id": "dc125d9f-6f9e-4991-94d4-aafb91fbec52",
 		"name": "CDP Portal Backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32854331"
+		"_exporter_id": "32854331",
+		"_collection_link": "https://warped-equinox-611463.postman.co/workspace/Defra~88b3f55a-aa6a-47e2-a1dd-077ee2351d27/collection/32854331-dc125d9f-6f9e-4991-94d4-aafb91fbec52?action=share&source=collection_link&creator=32854331"
 	},
 	"item": [
 		{
@@ -322,14 +323,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/deployment-settings/cdp-portal-frontend/infra-dev",
+					"raw": "{{root}}/deployment-settings/cdp-portal-frontend/management",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
 						"deployment-settings",
 						"cdp-portal-frontend",
-						"infra-dev"
+						"management"
 					]
 				}
 			},
@@ -755,12 +756,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/whats-running-where",
+					"raw": "{{root}}/running-services",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
-						"whats-running-where"
+						"running-services"
 					]
 				}
 			},
@@ -772,13 +773,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{root}}/v2/whats-running-where/filters",
+					"raw": "{{root}}/running-services/filters",
 					"host": [
 						"{{root}}"
 					],
 					"path": [
-						"v2",
-						"whats-running-where",
+						"running-services",
 						"filters"
 					]
 				}
